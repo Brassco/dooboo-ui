@@ -179,13 +179,15 @@ const Slider: FC<Props> = ({
 
   if (sliderRef.current)
     sliderRef.current.measure((x, y, width, height, pageX) => {
-      setSliderPositionX(pageX);
-      setSliderWidth(width);
+      if (width && pageX) {
+        setSliderPositionX(pageX);
+        setSliderWidth(width);
+      }
     });
 
   return (
     // @ts-ignore
-    <Container ref={sliderRef} {...panResponder.panHandlers}>
+    <Container ref={sliderRef} collapsable={false} {...panResponder.panHandlers}>
       <Rail testID="rail-test-id" style={railStyle} />
       <Track testID="track-test-id" percent={percent} style={trackStyle} />
       {!hideMark && step > 0 && (
