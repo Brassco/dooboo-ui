@@ -1,4 +1,13 @@
 {
+  "name": "dooboo-ui",
+  "version": "1.0.10",
+  "description": "dooboo-ui Repo with fixed Slider for Android",
+  "author": "Stanislav Dmytrenko",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brassco/dooboo-ui.git"
+  },
   "homepage": "https://dooboolab.github.io/dooboo-ui/",
   "private": true,
   "scripts": {
